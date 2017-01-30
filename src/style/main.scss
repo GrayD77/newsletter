@@ -130,7 +130,33 @@ main {
 
 .foto-form-wrapper,
 .event-form-wrapper {
+	position: relative;
 	padding: 10px;
 	border: 1px solid #efefef;
+
+	.removeItem {
+		position: absolute;
+		right: 10px;
+		bottom: 100%;
+		margin-bottom: 10px;
+		background-color: #fff;
+		border: none;
+		border-radius: 50%;
+		box-shadow: 0 0 1px rgba(0,0,0,.2);
+		transition: box-shadow .07s;
+
+		&:hover {
+			box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+		}
+
+		&:focus {
+			outline: none;
+		}
+		
+		&:active {
+			box-shadow: 0 0 1px rgba(0,0,0,.2);
+		}
+	}
+
 }
 

@@ -4,136 +4,136 @@ var Templates = {
 		var data = item.data;
 
 		var html = `
-	<div class="section-wrapper ${item.type}">
-		<table width="800" class="white-bg" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff" style="background-color: #fff; margin: 0; padding: 0;">
-			<tr style="height: 50px; margin: 0; padding: 0;">
-				<td style="height: inherit; margin: 0; padding: 0;"></td>
-			</tr>
-			<tr style="margin: 0; padding: 0;">
-				<td align="center" style="font-size: 13px; line-height: 17px; margin: 0; padding: 0; width: 274px;">
-					<span mc:edit="top-left-text">
-						Анонс мероприятий IMAGURU
-						<br>
+			<div class="section-wrapper" data-index="${item.index}">
+				<table width="800" class="white-bg" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff" style="background-color: #fff; margin: 0; padding: 0;">
+					<tr style="height: 50px; margin: 0; padding: 0;">
+						<td style="height: inherit; margin: 0; padding: 0;"></td>
+					</tr>
+					<tr style="margin: 0; padding: 0;">
+						<td align="center" style="font-size: 13px; line-height: 17px; margin: 0; padding: 0; width: 274px;">
+							<span mc:edit="top-left-text">
+								Анонс мероприятий IMAGURU
+								<br>
 
-						${data.date}
+								${data.date}
 
-					</span>
-				</td>
-				<td style="margin: 0; padding: 0; width: 252px;"></td>
-				<td align="center" style="font-size: 13px; line-height: 17px; margin: 0; padding: 0; width: 274px;">
-					<span mc:edit="top-right-text">
-						Письмо отображается некорректно?
-						<br>
-						<a href="*|ARCHIVE|*" style="color: inherit;">
-							Откройте письмо в браузере.
-						</a>
-					</span>
-				</td>
-			</tr>
-			<tr style="height: 13px; margin: 0; padding: 0;">
-				<td style="height: inherit; margin: 0; padding: 0;"></td>
-			</tr>
-		</table>
-		<table width="800" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" class="white-bg" style="background-color: #fff; margin: 0; padding: 0;">
-			<tr style="margin: 0; padding: 0;">
-				<td style="margin: 0; padding: 0; width: 800px;">
-					<img mc:edit="main-image" src="
+							</span>
+						</td>
+						<td style="margin: 0; padding: 0; width: 252px;"></td>
+						<td align="center" style="font-size: 13px; line-height: 17px; margin: 0; padding: 0; width: 274px;">
+							<span mc:edit="top-right-text">
+								Письмо отображается некорректно?
+								<br>
+								<a href="*|ARCHIVE|*" style="color: inherit;">
+									Откройте письмо в браузере.
+								</a>
+							</span>
+						</td>
+					</tr>
+					<tr style="height: 13px; margin: 0; padding: 0;">
+						<td style="height: inherit; margin: 0; padding: 0;"></td>
+					</tr>
+				</table>
+				<table width="800" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" class="white-bg" style="background-color: #fff; margin: 0; padding: 0;">
+					<tr style="margin: 0; padding: 0;">
+						<td style="margin: 0; padding: 0; width: 800px;">
+							<img mc:edit="main-image" src="
 
-						${data.img}
+								${data.img}
 
-					" width="800" height="276" alt="IMAGURU" style="display: block; height: auto; max-width: 800px;">
-				</td>
-			</tr>
-			<tr style="margin: 0; padding: 0;">
-				<td align="center" valign="top" style="font-size: 21px; margin: 0; padding: 0;">
-					<span mc:edit="main-text">
-						ГЛАВНЫЕ СОБЫТИЯ
-						<br>
+							" width="800" height="276" alt="IMAGURU" style="display: block; height: auto; max-width: 800px;">
+						</td>
+					</tr>
+					<tr style="margin: 0; padding: 0;">
+						<td align="center" valign="top" style="font-size: 21px; margin: 0; padding: 0;">
+							<span mc:edit="main-text">
+								ГЛАВНЫЕ СОБЫТИЯ
+								<br>
 
-						${data.date}
+								${data.date}
 
-					</span>
-				</td>
-			</tr>
-			<tr style="height: 63px; margin: 0; padding: 0;">
-				<td style="height: inherit; margin: 0; padding: 0;"></td>
-			</tr>
-		</table>
-	</div>
-`;
+							</span>
+						</td>
+					</tr>
+					<tr style="height: 63px; margin: 0; padding: 0;">
+						<td style="height: inherit; margin: 0; padding: 0;"></td>
+					</tr>
+				</table>
+			</div>
+		`;
 
 		return html;
 	},
 
 	mainEvent: function(item){
 		var html = `
-	<div class="section-wrapper ${item.type}">
-		<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
-			<tr style="margin: 0; padding: 0;">
-				<td align="center" style="font-size: 19px; height: 60px; margin: 0; padding: 0;">
-					<span mc:edit="section-title-1">
+			<div class="section-wrapper" data-index="${item.index}">
+				<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
+					<tr style="margin: 0; padding: 0;">
+						<td align="center" style="font-size: 19px; height: 60px; margin: 0; padding: 0;">
+							<span mc:edit="section-title-1">
 
 
-						${item.data.sectionTitle}
+								${item.data.sectionTitle}
 
 
-					</span>
-				</td>
-			</tr>
-		</table>
-		<table width="800" bgcolor="#fff" class="white-bg" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff; margin: 0; padding: 0;">
-			<tr style="height: 27px; margin: 0; padding: 0;">
-				<td style="height: inherit; margin: 0; padding: 0;"></td>
-			</tr>
-			<tr class="h2" style="color: #ef4136; font-size: 32px; margin: 0; padding: 0;">
-				<td style="margin: 0; padding: 0; width: 45px;"></td>
-				<td align="center" style="margin: 0; padding: 0;">
-					<span mc:edit="title">
-						${item.data.title}
-					</span>
-				</td>
-				<td style="margin: 0; padding: 0; width: 45px;"></td>
-			</tr>
-			<tr style="height: 25px; margin: 0; padding: 0;">
-				<td style="height: inherit; margin: 0; padding: 0;"></td>
-			</tr>
-			<tr style="margin: 0; padding: 0;">
-				<td style="margin: 0; padding: 0; width: 45px;"></td>
-				<td style="margin: 0; padding: 0; width: 710px;">
-					<img mc:edit="main-event-img" src="
+							</span>
+						</td>
+					</tr>
+				</table>
+				<table width="800" bgcolor="#fff" class="white-bg" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff; margin: 0; padding: 0;">
+					<tr style="height: 27px; margin: 0; padding: 0;">
+						<td style="height: inherit; margin: 0; padding: 0;"></td>
+					</tr>
+					<tr class="h2" style="color: #ef4136; font-size: 32px; margin: 0; padding: 0;">
+						<td style="margin: 0; padding: 0; width: 45px;"></td>
+						<td align="center" style="margin: 0; padding: 0;">
+							<span mc:edit="title">
+								${item.data.title}
+							</span>
+						</td>
+						<td style="margin: 0; padding: 0; width: 45px;"></td>
+					</tr>
+					<tr style="height: 25px; margin: 0; padding: 0;">
+						<td style="height: inherit; margin: 0; padding: 0;"></td>
+					</tr>
+					<tr style="margin: 0; padding: 0;">
+						<td style="margin: 0; padding: 0; width: 45px;"></td>
+						<td style="margin: 0; padding: 0; width: 710px;">
+							<img mc:edit="main-event-img" src="
 
-					${item.data.img}
+							${item.data.img}
 
-					" width="710" height="355" alt="VentureDay - 12 April 2017" style="display: block; height: auto; max-width: 710px;">
-				</td>
-				<td style="margin: 0; padding: 0; width: 45px;"></td>
-			</tr>
-			<tr style="height: 36px; margin: 0; padding: 0;">
-				<td style="height: inherit; margin: 0; padding: 0;"></td>
-			</tr>
-			<tr style="margin: 0; padding: 0;">
-				<td style="margin: 0; padding: 0; width: 45px;"></td>
-				<td style="margin: 0; padding: 0;">
-					<span mc:edit="main-event-descr" style="font-size: 16px; line-height: 19px;">
+							" width="710" height="355" alt="VentureDay - 12 April 2017" style="display: block; height: auto; max-width: 710px;">
+						</td>
+						<td style="margin: 0; padding: 0; width: 45px;"></td>
+					</tr>
+					<tr style="height: 36px; margin: 0; padding: 0;">
+						<td style="height: inherit; margin: 0; padding: 0;"></td>
+					</tr>
+					<tr style="margin: 0; padding: 0;">
+						<td style="margin: 0; padding: 0; width: 45px;"></td>
+						<td style="margin: 0; padding: 0;">
+							<span mc:edit="main-event-descr" style="font-size: 16px; line-height: 19px;">
 
-					${item.data.dscr}
+							${item.data.dscr}
 
-					</span>
-				</td>
-				<td style="margin: 0; padding: 0; width: 45px;"></td>
-			</tr>
-			<tr style="height: 56px; margin: 0; padding: 0;">
-				<td style="height: inherit; margin: 0; padding: 0;"></td>
-			</tr>
-		</table>
-	</div>
-`;
+							</span>
+						</td>
+						<td style="margin: 0; padding: 0; width: 45px;"></td>
+					</tr>
+					<tr style="height: 56px; margin: 0; padding: 0;">
+						<td style="height: inherit; margin: 0; padding: 0;"></td>
+					</tr>
+				</table>
+			</div>
+		`;
 		return html;
 	},
 
 	article: function(item){
 		var html = `
-			<div class="section-wrapper">
+			<div class="section-wrapper" data-index="${item.index}">
 
 				<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
 					<tr style="margin: 0; padding: 0;">
@@ -211,7 +211,7 @@ var Templates = {
 
 		// header
 		htmlHeader = `
-			<div class="section-wrapper">
+			<div class="section-wrapper" data-index="${item.index}">
 				<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
 					<tr style="margin: 0; padding: 0;">
 						<td align="center" style="font-size: 19px; height: 60px; margin: 0; padding: 0;">
@@ -316,7 +316,7 @@ var Templates = {
 		var htlmFooter = ``;
 
 		htmlHeader = `
-			<div class="section-wrapper">
+			<div class="section-wrapper" data-index="${item.index}">
 				<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
 					<tr style="margin: 0; padding: 0;">
 						<td align="center" style="font-size: 19px; height: 60px; margin: 0; padding: 0;">
@@ -388,7 +388,7 @@ var Templates = {
 
 	footer : function(item) {
 		var html = `
-			<div class="section-wrapper">
+			<div class="section-wrapper" data-index="${item.index}">
 				<table class="title white-bg" bgcolor="#fff" width="800" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff; margin: 0; padding: 0;">
 					<tr align="center" style="margin: 0; padding: 0;">
 						<td style="margin: 0; padding: 0;">
@@ -448,7 +448,6 @@ var Templates = {
 					</tr>
 				</table>
 			</div>
-
 		`;
 
 		return html;

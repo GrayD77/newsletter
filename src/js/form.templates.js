@@ -5,7 +5,7 @@ var FormTemplates = {
 
 		var html = `
 
-			<form action=""  class="editForm editForm-${item.index}">
+			<form action=""  class="editForm" data-index="${item.index}">
 
 				<label>
 					<span>Дата (например: 16-25 января)</span>
@@ -26,7 +26,7 @@ var FormTemplates = {
 
 	mainEvent: function(item){
 		var html = `
-			<form action=""  class="editForm editForm-${item.index}">
+			<form action=""  class="editForm" data-index="${item.index}">
 				<h1>${item.data.sectionTitle}</h1>
 				<label>
 					<span>Заголовок раздела</span>
@@ -57,7 +57,7 @@ var FormTemplates = {
 
 	article: function(item){
 		var html = `
-			<form action=""  class="editForm editForm-${item.index}">
+			<form action=""  class="editForm" data-index="${item.index}">
 				<h1>${item.data.sectionTitle}</h1>
 				<label>
 					<span>Заголовок раздела</span>
@@ -93,7 +93,7 @@ var FormTemplates = {
 		var htmlFooter = ``;
 		// item.data.events
 		htmlHeader = `
-		<form class="editForm events">
+		<form class="editForm events" data-index="${item.index}" data-name="events">
 		<h1>${item.data.sectionTitle}</h1>
 		<label>
 			<span>Заголовок раздела</span>
@@ -108,8 +108,12 @@ var FormTemplates = {
 
 		for (var i = 0, length = item.data.events.length; i < length; i++) {
 			htmlBody += `
-				<h2>Event #${i+1}</h2>
-				<div class="event-form-wrapper" data-index="${i}">
+
+				<h2>
+					Event #${i+1}
+				</h2>
+				<div class="event-form-wrapper section" data-index="${i}">
+					<button class="removeItem" >x</button>
 					<label>
 						<span>URL картинки</span>
 						<input type="text" name="img" value="${item.data.events[i].img}">
@@ -123,6 +127,7 @@ var FormTemplates = {
 						<textarea class="event" name="dscr">${item.data.events[i].dscr}</textarea>
 					</label>
 				</div>
+
 			`;
 		};
 
@@ -138,7 +143,7 @@ var FormTemplates = {
 		var htmlFooter = ``;
 		// item.data.events
 		htmlHeader = `
-		<form class="editForm fotos">
+		<form class="editForm fotos" data-index="${item.index}" data-name="fotos">
 		<h1>${item.data.sectionTitle}</h1>
 		<label>
 			<span>Заголовок раздела</span>
@@ -154,7 +159,8 @@ var FormTemplates = {
 		for (var i = 0, length = item.data.fotos.length; i < length; i++) {
 			htmlBody += `
 				<h2>Foto #${i+1}</h2>
-				<div class="foto-form-wrapper" data-index="${i}">
+				<div class="foto-form-wrapper section" data-index="${i}">
+					<button class="removeItem" >x</button>
 					<label>
 						<span>URL картинки</span>
 						<input type="text" name="img" value="${item.data.fotos[i].img}">
@@ -170,7 +176,7 @@ var FormTemplates = {
 	footer: function(item) {
 		var html = `
 
-			<form action=""  class="editForm editForm-${item.index}">
+			<form action=""  class="editForm" data-index="${item.index}">
 				<h3>${item.data.sectionTitle}</h3>
 				<label>
 					<span>Заголовок раздела</span>

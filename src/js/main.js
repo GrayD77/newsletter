@@ -52,7 +52,7 @@ $(document).on('submit', '.editForm', function(e){
 $(document).on('keyup change', '.editForm', function(e){
 
 	var thisForm = $(this);
-	var index = thisForm.index();
+	var index = thisForm.data('index');
 	var item = enterData[index];
 
 	thisForm.find('input, textarea').each(function(){
@@ -95,14 +95,49 @@ $(document).on('keyup change', '.editForm', function(e){
 });
 
 // addEvent:
-$(document).on('click', '#addEvent' ,function(e){
+$(document).on('click', '#addEvent, #addFoto' ,function(e){
 	e.preventDefault();
-	alert('пока не работает');
+	var form = $(this).closest('.editForm')
+	var index = form.data('index');
+	var item = enterData[index]
+	var name = form.data('name');
+	var newElement = {};
+	var template = enterData[index]['template'];
+
+	for (var key in template) {
+		newElement[key] = template[key];
+	}
+
+	item.data[name].push(newElement);
+
+	var newHTML = $(Templates.create(item.type, item)).html();
+
+	$('.section-wrapper').eq(index).html(newHTML);
+
+	var newForm = $(FormTemplates.create(item.type, item)).html();
+
+	$('.editForm').eq(index).html(newForm);
+
+
 });
 
-$(document).on('click', '#addFoto', function(e){
+$(document).on('click', '.removeItem', function(e){
 	e.preventDefault();
-	alert('пока не работает');
+
+	var form = $(this).closest('.editForm')
+	var index = form.data('index');
+	var item = enterData[index];
+	var name = form.data('name');
+	var elIndex = $(this).closest('.section').data('index');
+console.log(elIndex)
+	item.data[name].splice(elIndex, 1);
+
+	var newHTML = $(Templates.create(item.type, item)).html();
+	$('.section-wrapper').eq(index).html(newHTML);
+	var newForm = $(FormTemplates.create(item.type, item)).html();
+	$('.editForm').eq(index).html(newForm);
+
+
 });
 
 

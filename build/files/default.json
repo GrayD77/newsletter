@@ -72,7 +72,14 @@
 				}
 
 			]
+		},
+
+		"template" : {
+			"img" : "http://placehold.it/256x216",
+			"date" : "01 ЯНВАРЯ",
+			"dscr" : "Описание"
 		}
+
 	},
 
 	{
@@ -108,7 +115,11 @@
 				}
 
 			]
-		}
+		},
+
+		"template": { 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				}
 	},
 
 	{
