@@ -1,44 +1,56 @@
 [
 	{
-		"type": "main",
-		"title" : "",
+		"type": "mainSection",
 
 		"data": {
 
-			"date" : "16-25 января!"
+			"sectionTitle" : "",
+			"date" : "16-35 января!",
+			"img" : "http://imaguru.co/newsletter/main.png"
 
 		}
 	},
 
 
 	{
-		"type" : "main-event",
-		"title" : "comming soon...",
+		"type" : "mainEvent",
+
 
 		"data" : {
-
+			"sectionTitle" : "comming soon...",
 			"title" : "Venture Day Minsk",
 			"img" : "http://imaguru.co/newsletter/vd.jpg",
-			"html-content" : ""
-
+			"dscr" : "Hey, world, meet us again!\r\n<br><br>\r\nVenture Day Minsk is an international startup event organized annually by Belbiz to connect local startup talent to the international venture community.<br>April 12, 2017 is the Date! 3 months left before VD rocket is launched to Startup Space.\r\n<br><br>\r\nDon’t hold back the curiosity – stay updated following us.\r\n<a href=\"https://www.facebook.com/hashtag/VD\" target=\"_blank\" style=\"color: inherit;\">#VD</a>\r\n<a href=\"https://www.facebook.com/hashtag/VentureDay\" target=\"_blank\" style=\"color: inherit;\">#VentureDay</a>"
 		}
 	},
-
 
 	{
 		"type" : "article",
-		"title" : "НОВОСТИ IMAGURU",
 
 		"data" : {
-			"title" : "ФРЫЛАНС БЯЗ САХАРУ!"
+			"img": "http://imaguru.co/newsletter/freelance.jpg",
+			"sectionTitle" : "НОВОСТИ IMAGURU",
+			"title" : "СПЕЦВЫПУСК ДЛЯ БЕЛАРУСИ:\r\n<br>НЕ БОЙТЕСЬ НАЛОГОВОЙ!\r\n<br>(Как фрилансить на upwork легально?)",
+			"dscr" : "Как легально фрилансить на Upwork гражданам Беларуси? На вопросы отвечает Маргарита Новосельцева, учредитель бухгалтерских компаний “Райкири” и “Делай Свое Дело”. Главный бухгалтер с опытом работы более 10 лет и опытом налогового и бухгалтерского консалтинга более 7 лет в IT-сфере. Автор полезных статей, спикер семинаров и конференций, обучающих курсов на различных площадках для IT-бизнеса. В клиентском портфеле более 100 компаний."
+		}
+	},
+
+	{
+		"type" : "article",
+
+		"data" : {
+			"img": "http://imaguru.co/newsletter/imaguru-plant.jpg",
+			"sectionTitle" : "IMAGURU РЕКОМЕНДУЕТ",
+			"title" : "Здания бывших заводов — идеальное место для коворкингов, креативных площадок и квест-комнат",
+			"dscr" : "В Минске достаточно объектов, которые якобы никому не нужны: здания бывших заводов, старые административные площадки, подвальные помещения. Мнение минчан по этому вопросу разделилось: одни хотят все это поскорее снести, другие считают, что такие объекты можно переделать и подарить им вторую жизнь. Мы приверженцы второго варианта. Realt.by поездил по городу и обнаружил, что таким объектам найдено множество функциональных применений — самые яркие из них в нашем фоторепортаже."
 		}
 	},
 
 	{
 		"type" : "events",
-		"title" : "СОБЫТИЯ IMAGURU",
 
 		"data" : {
+			"sectionTitle" : "СОБЫТИЯ IMAGURU",
 			"events" : [
 
 				{
@@ -60,6 +72,50 @@
 				}
 
 			]
+		}
+	},
+
+	{
+		"type" : "social",
+
+		"data" : {
+			"sectionTitle" : "IMAGURU В СОЦСЕТЯХ",
+			"fotos" : [
+				{ 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				},
+
+				{ 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				},
+				{ 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				},
+				{ 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				},
+
+				{ 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				},
+
+				{ 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				},
+
+				{ 
+					"img" : "http://imaguru.co/newsletter/foto.png"
+				}
+
+			]
+		}
+	},
+
+	{
+		"type" : "footer",
+		"data" : {
+			"sectionTitle" : "FOLLOW US",
+			"footerHTMLContent" : "Copyright © 2017 IMAGURU: Бизнес-Клуб/Startup Hub, All rights reserved.\r\n<br>\r\nYou are reciving this email\r\n<br>\r\n<br><br>\r\nOur mailing address is:\r\n<br>IMAGURU: Бизнес-клуб/Startup Hub\r\n<br>ул. Фабрициуса\r\n<br>Минск 220007\r\n<br>Belarus\r\n<br>\r\n<br><br>\r\nAdd us to your address book\r\n<br>\r\n<br><br>\r\nWant to change how you receive these emails?\r\n<br>\r\nYou can update your preferences or unsubscribe from this list\r\n<br>\r\n"
 		}
 	}
 ]
