@@ -1,0 +1,65 @@
+[
+	{
+		"type": "main",
+		"title" : "",
+
+		"data": {
+
+			"date" : "16-25 января!"
+
+		}
+	},
+
+
+	{
+		"type" : "main-event",
+		"title" : "comming soon...",
+
+		"data" : {
+
+			"title" : "Venture Day Minsk",
+			"img" : "http://imaguru.co/newsletter/vd.jpg",
+			"html-content" : ""
+
+		}
+	},
+
+
+	{
+		"type" : "article",
+		"title" : "НОВОСТИ IMAGURU",
+
+		"data" : {
+			"title" : "ФРЫЛАНС БЯЗ САХАРУ!"
+		}
+	},
+
+	{
+		"type" : "events",
+		"title" : "СОБЫТИЯ IMAGURU",
+
+		"data" : {
+			"events" : [
+
+				{
+					"img" : "http://imaguru.co/newsletter/ev1.jpg",
+					"date" : "16 ЯНВАРЯ",
+					"dscr" : "Клуб тренеров. Эмоциональный интеллект в работе и жизни. "
+				},
+
+				{
+					"img" : "http://imaguru.co/newsletter/ev2.jpg",
+					"date" : "17 ЯНВАРЯ",
+					"dscr" : "\"English Evening\" (уровень intermediate и выше) - каждый вторник"
+				},
+
+				{
+					"img" : "http://imaguru.co/newsletter/ev3.jpg",
+					"date" : "18 ЯНВАРЯ",
+					"dscr" : "Мастер класс Алексанра самойлова: Нематериальная мотивация сотрудников"
+				}
+
+			]
+		}
+	}
+]
