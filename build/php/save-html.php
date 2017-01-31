@@ -28,7 +28,7 @@
 
 		echo '
 			<p>Файл '. $action .' и доступен по <a target="_blank" class="copy-url" href="' . $url . '">ссылке:</a></p>
-			<button class="copy-url">Скопировать URL</button>
+			<button class="copy-url-btn">Скопировать URL</button>
 		';
 
 	} else {

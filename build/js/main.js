@@ -6,8 +6,10 @@ var enterData;
 var addtData;
 
 var jsonDirectory = "files/";
+var hash = window.location.hash.slice(1);
+$('#saveHTML .file-name').val(hash || '');
 
-getJSON();
+getJSON(window.location.hash.slice(1));
 // get JSON
 function getJSON(name){
 	name = name || 'default';
@@ -22,6 +24,7 @@ function getJSON(name){
 		success:  function(data){
 		// create DOM
 		window.location.hash = name;
+		$('main').before('<p class="page-title">'+ name +'</p>');
 		createNewsLetter(data);
 		},
 		error: function(){
