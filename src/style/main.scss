@@ -39,7 +39,7 @@ main {
 
 .controls form {
 
-	border-top: 2px solid #aaa;
+	border-top: 5px solid #aaa;
 	padding:  0 20px 20px;
 
 	h1 {
@@ -209,7 +209,7 @@ main {
 	.sort {
 
 		&Up{
-			visibility: hidden;
+			// visibility: hidden;
 		}
 
 	}
@@ -220,7 +220,7 @@ main {
 	.sort {
 
 		&Down{
-			visibility: hidden;
+			// visibility: hidden;
 		}
 
 	}
@@ -264,9 +264,10 @@ main {
 
 .section-controls {
 	position: absolute;
-	right: 5px;
 	top: 5px;
+	left: 5px;
 	display: flex;
+	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: flex-end;
 
@@ -289,7 +290,7 @@ main {
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
 		cursor: pointer;
-		margin-right: 5px;
+		margin: 0 5px;
 	}
 
 	.section-sort.sectionUp {
@@ -308,12 +309,12 @@ main {
 
 .editForm:first-of-type {
 	.section-sort.sectionUp {
-		visibility: hidden;
+		// visibility: hidden;
 	}
 }
 
 .editForm:last-of-type {
 	.section-sort.sectionDown {
-		visibility: hidden;
+		// visibility: hidden;
 	}
 }

@@ -38,6 +38,13 @@
 
 					]
 
+				},
+
+				"template" : {
+						"title" : "Главное событие",
+						"link" : "https://imaguru.by",
+						"img" : "http://placehold.it/710x355",
+						"dscr" : "text"
 				}
 			},
 
@@ -139,8 +146,15 @@
 						"dscr" : "text"
 					}
 
-				],
+				]
 
+			},
+
+			"template" : {
+				"title" : "Главное событие",
+				"link" : "https://imaguru.by",
+				"img" : "http://placehold.it/710x355",
+				"dscr" : "text"
 			}
 		},
 
@@ -221,21 +235,6 @@
 					{ 
 						"img" : "http://imaguru.co/newsletter/foto.png"
 					},
-					{ 
-						"img" : "http://imaguru.co/newsletter/foto.png"
-					},
-					{ 
-						"img" : "http://imaguru.co/newsletter/foto.png"
-					},
-
-					{ 
-						"img" : "http://imaguru.co/newsletter/foto.png"
-					},
-
-					{ 
-						"img" : "http://imaguru.co/newsletter/foto.png"
-					},
-
 					{ 
 						"img" : "http://imaguru.co/newsletter/foto.png"
 					}

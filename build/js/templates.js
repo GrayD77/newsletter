@@ -81,6 +81,9 @@ var Templates = {
 						</td>
 					</tr>
 				</table>
+		`;
+		for ( var i = 0, length = item.data.events.length; i < length; i++) {
+			html += `
 				<table width="800" bgcolor="#fff" class="white-bg" border="0" cellpadding="0" cellspacing="0" style="background-color: #fff; margin: 0; padding: 0;">
 					<tr style="height: 27px; margin: 0; padding: 0;">
 						<td style="height: inherit; margin: 0; padding: 0;"></td>
@@ -89,10 +92,14 @@ var Templates = {
 						<td style="margin: 0; padding: 0; width: 45px;"></td>
 						<td align="center" style="margin: 0; padding: 0;">
 							<a target="_blank" href="
-								${item.data.link}
+
+								${item.data.events[i].link}
+
 							" style="text-decoration: none; color: #ef4136;">
 								<span mc:edit="title" style="color: #ef4136; font-size: 32px;">
-									${item.data.title}
+
+									${item.data.events[i].title}
+
 								</span>
 							</a>
 						</td>
@@ -106,13 +113,13 @@ var Templates = {
 						<td style="margin: 0; padding: 0; width: 710px;">
 
 							<a target="_blank" href="
-								${item.data.link}
+								${item.data.events[i].link}
 							" style="text-decoration: none;">
 								<img mc:edit="main-event-img" src="
 
-								${item.data.img}
+								${item.data.events[i].img}
 
-								" width="710" height="355" alt="VentureDay - 12 April 2017" style="display: block; height: auto; max-width: 710px;">
+								" width="710" height="355" alt="${item.data.events[i].title}" style="display: block; height: auto; max-width: 710px;">
 							</a>
 
 						</td>
@@ -126,7 +133,7 @@ var Templates = {
 						<td style="margin: 0; padding: 0;">
 							<span mc:edit="main-event-descr" style="font-size: 16px; line-height: 19px;">
 
-							${item.data.dscr}
+							${item.data.events[i].dscr}
 
 							</span>
 						</td>
@@ -136,8 +143,10 @@ var Templates = {
 						<td style="height: inherit; margin: 0; padding: 0;"></td>
 					</tr>
 				</table>
-			</div>
-		`;
+			`;
+		};
+
+		html += `</div>`;
 		return html;
 	},
 
@@ -195,12 +204,10 @@ var Templates = {
 
 								<img mc:edit="article-image" src="
 
-
-
 									${item.data.img}
 
 
-								" height="330" width="360" alt="Фриланс без сахара" style="display: block; height: auto; max-width: 360px;">
+								" height="330" width="360" alt="${item.data.title}" style="display: block; height: auto; max-width: 360px;">
 							</a>
 						</td>
 						<td style="margin: 0; padding: 0; width: 20px;"></td>
@@ -279,7 +286,7 @@ var Templates = {
 							${item.data.events[i].img}
 
 
-						" width="256" height="216" alt="Клуб тренеров" style="display: block; height: auto; max-width: 256px;">
+						" width="256" height="216" alt="" style="display: block; height: auto; max-width: 256px;">
 							</a>
 
 						<span style="display: block; height: 12px;"></span>
@@ -311,7 +318,7 @@ var Templates = {
 							${item.data.events[i+1] ? item.data.events[i+1].img : ''}
 
 
-						${item.data.events[i+1] ? '" width="256" height="216" alt="English Evening" style="display: block; height: auto; max-width: 256px;">' : ''}
+						${item.data.events[i+1] ? `" width="256" height="216" alt="" style="display: block; height: auto; max-width: 256px;">` : ''}
 						</a>
 
 						<span style="display: block; height: 12px;"></span>

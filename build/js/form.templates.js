@@ -33,9 +33,14 @@ var FormTemplates = {
 	},
 
 	mainEvent: function(item){
-		var html = `
-			<form action=""  class="editForm" data-index="${item.index}">
-				<h1>${item.data.sectionTitle}</h1>
+		var html = ``;
+		var htmlHeader = ``;
+		var htmlBody = ``;
+		var htmlFooter = ``;
+		// item.data.events
+		htmlHeader = `
+		<form class="editForm events" data-index="${item.index}" data-name="events">
+		<h1>${item.data.sectionTitle}</h1>
 
 				<div class="section-controls">
 					<span class="sectionUp section-sort"></span>
@@ -43,35 +48,56 @@ var FormTemplates = {
 					<span class="sectionRemove">X</span>
 				</div>
 
-				<label>
-					<span>Заголовок раздела</span>
-					<input type="text" name="sectionTitle" value="${item.data.sectionTitle}">
-				</label>
+		<label>
+			<span>Заголовок раздела</span>
+			<input type="text" name="sectionTitle" value="${item.data.sectionTitle}">
+		</label>
+		`;
 
-				<label>
-					<span>Название события</span>
-					<input type="text" name="title" value="${item.data.title}">
-				</label>
-
-				<label>
-					<span>Ссылка на событие</span>
-					<input type="text" name="link" value="${item.data.link}">
-				</label>
-
-
-				<label>
-					<span>Ссылка на кратинку:</span>
-					<input type="text" name="img" value="${item.data.img}">
-				</label>
-
-				<label>
-					<span>Описание</span>
-					<textarea name="dscr" value="">${item.data.dscr}
-					</textarea>
-				</label>
-
+		htmlFooter = `
+			<button id="addEvent">Добавить событие</button>
 			</form>
 		`;
+
+		for (var i = 0, length = item.data.events.length; i < length; i++) {
+			htmlBody += `
+
+				<h2>
+					MainEvent #${i+1}
+				</h2>
+				<div class="event-form-wrapper section" data-index="${i}">
+
+					<div class="item-controls">
+						<div class="sort-wrapper">
+							<span class="sort sortUp"></span>
+							<span class="sort sortDown"></span>
+						</div>
+						<span class="removeItem">x</span>
+					</div>
+
+					<label>
+						<span>Заголовок</span>
+						<textarea class="event" name="title">${item.data.events[i].title}</textarea>
+					</label>
+					<label>
+						<span>Ссылка на новость</span>
+						<input type="text" name="link" value="${item.data.events[i].link}">
+					</label>
+					<label>
+						<span>URL картинки</span>
+						<input type="text" name="img" value="${item.data.events[i].img}">
+					</label>
+					<label>
+					<span>Описание</span>
+					<textarea name="dscr" value="">${item.data.events[i].dscr}
+					</textarea>
+					</label>
+				</div>
+
+			`;
+		};
+
+		html = htmlHeader + htmlBody + htmlFooter;
 		return html;
 	},
 
