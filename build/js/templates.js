@@ -249,8 +249,12 @@ var Templates = {
 
 				<tr style="margin: 0; padding: 0;">
 					<td style="margin: 0; padding: 0; width: 123px;"></td>
-
 					<td style="margin: 0; padding: 0; width: 256px;" valign="top">
+
+						<a target="_blank" href="
+							${item.data.events[i].link}
+						" style="display:block;">
+
 						<img mc:edit="event-1-image" src="
 
 
@@ -258,6 +262,8 @@ var Templates = {
 
 
 						" width="256" height="216" alt="Клуб тренеров" style="display: block; height: auto; max-width: 256px;">
+							</a>
+
 						<span style="display: block; height: 12px;"></span>
 						<span mc:edit="event-1-date" class="event-date" style="color: #ef4136; font-size: 19px;">
 
@@ -270,25 +276,26 @@ var Templates = {
 						<span mc:edit="event-1-dscr" class="event-dscr">
 
 							${item.data.events[i].dscr}
-							<a target="_blank" href="
 
-								${item.data.events[i].link}
 
-							" 
-							style="color: #000; font-size: 13px;">
-								(читать)
-							</a>
 						</span>
 					</td>
 					<td style="margin: 0; padding: 0; width: 42px;"></td>
 					<td style="margin: 0; padding: 0; width: 256px;" valign="top">
-						${item.data.events[i+1] ? '<img mc:edit="event-2-image" src="' : '' }
+							<a target="_blank" href="
+
+								${item.data.events[i+1] ? item.data.events[i+1].link : ''}
+
+							" style="display:block;">
+							${item.data.events[i+1] ? '<img mc:edit="event-2-image" src="' : '' }
 
 
 							${item.data.events[i+1] ? item.data.events[i+1].img : ''}
 
 
 						${item.data.events[i+1] ? '" width="256" height="216" alt="English Evening" style="display: block; height: auto; max-width: 256px;">' : ''}
+						</a>
+
 						<span style="display: block; height: 12px;"></span>
 						<span mc:edit="event-2-date" class="event-date" style="color: #ef4136; font-size: 19px;">
 
@@ -304,13 +311,10 @@ var Templates = {
 							${item.data.events[i+1] ? item.data.events[i+1].dscr : ''}
 
 
-							<a target="_blank" href="
 
-								${item.data.events[i+1] ? item.data.events[i+1].link : ''}
 
-							" style="color: #000; font-size: 13px;">
-								${item.data.events[i+1] ? '(читать)' : ''}
-							</a>
+
+
 						</span>
 					</td>
 					<td style="margin: 0; padding: 0; width: 123px;"></td>
