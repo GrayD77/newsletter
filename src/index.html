@@ -8,11 +8,22 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+			<div class="modal-container">
+				<div class="modal-window">
+					<button class="close-modal">X</button>
+					<div class="modal-window-content">
+						${innerHTML}
+					</div>
+				</div>
+			</div>
 	<!--  Let's -->
-	<form action="" class="saveNewsLetter">
-		<input type="text" placeholder="Имя рассылки">
-		<button>Сохранить!</button>
+	<form action="" class="saveNewsLetter" id="saveHTML">
+		<label class="overwrite">
+			<span>Перезаписать существующие</span>
+			<input type="checkbox" name="overwrite">
+		</label>
+		<input class="file-name" name="fileName" type="text" placeholder="Имя рассылки( a-Z 0-9 - )" pattern="^[a-z0-9-]+$">
+		<button>Сохранить письмо как web-страницу</button>
 	</form>
 
 	<main>
@@ -23,13 +34,12 @@
 		<section id="newsletter" class="newsletter">
 		</section>
 
-
-
 	</main>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/templates.js"></script>
 	<script src="js/form.templates.js"></script>
+	<script src="js/modal.window.template.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

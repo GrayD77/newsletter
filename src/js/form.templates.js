@@ -16,7 +16,6 @@ var FormTemplates = {
 					<input type="text" name="img" value="${item.data.img}">
 				</label>
 
-				<hr>
 			</form>
 
 		`;
@@ -49,7 +48,6 @@ var FormTemplates = {
 					</textarea>
 				</label>
 
-				<hr>
 			</form>
 		`;
 		return html;
@@ -80,7 +78,6 @@ var FormTemplates = {
 					</textarea>
 				</label>
 
-				<hr>
 			</form>
 			`;
 		return html;
@@ -113,7 +110,15 @@ var FormTemplates = {
 					Event #${i+1}
 				</h2>
 				<div class="event-form-wrapper section" data-index="${i}">
-					<button class="removeItem" >x</button>
+
+					<div class="item-controls">
+						<div class="sort-wrapper">
+							<span class="sort sortUp"></span>
+							<span class="sort sortDown"></span>
+						</div>
+						<span class="removeItem">x</span>
+					</div>
+
 					<label>
 						<span>URL картинки</span>
 						<input type="text" name="img" value="${item.data.events[i].img}">
@@ -160,7 +165,13 @@ var FormTemplates = {
 			htmlBody += `
 				<h2>Foto #${i+1}</h2>
 				<div class="foto-form-wrapper section" data-index="${i}">
-					<button class="removeItem" >x</button>
+					<div class="item-controls">
+						<div class="sort-wrapper">
+							<span class="sort sortUp"></span>
+							<span class="sort sortDown"></span>
+						</div>
+						<span class="removeItem">x</span>
+					</div>
 					<label>
 						<span>URL картинки</span>
 						<input type="text" name="img" value="${item.data.fotos[i].img}">
