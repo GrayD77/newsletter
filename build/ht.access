@@ -1,0 +1,4 @@
+AuthName "Вход для администратора"
+AuthType Basic
+AuthUserFile .htpasswd
+require valid-user

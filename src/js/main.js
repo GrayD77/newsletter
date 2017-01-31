@@ -67,7 +67,7 @@ $(document).on('keyup change', '.editForm', function(e){
 			if (eventIndex === undefined ) {
 				item.data[name] = this.value;
 			} else {
-				item.data.events[eventIndex][name] = this.value;
+				item.data.events[eventIndex][name] = cutScriptTag(this.value);
 			}
 
 		} else
@@ -77,7 +77,7 @@ $(document).on('keyup change', '.editForm', function(e){
 			if (eventIndex === undefined ) {
 				item.data[name] = this.value;
 			} else {
-				item.data.fotos[eventIndex][name] = this.value;
+				item.data.fotos[eventIndex][name] = cutScriptTag(this.value);
 			}
 
 		} else {
@@ -196,12 +196,29 @@ $(document).on('click', '.close-modal' ,function(e){
 
 });
 
-function saveFileSuccess(answerHTML) {
-	// create modal window with answerHTML
-};
+$(document).on('click', '.copy-url' ,function(e){
+	e.preventDefault();
+
+	var url;
+	var secondPart = $(this).parent().find('.copy-url').attr('href');
+	var firsPart = window.location;
+
+	url = firsPart +  secondPart;
+
+	copyToClipboard(url);
+	$(this).text('Готово');
+});
 
 function saveFileSuccess(answerHTML) {
 	// create modal window with answerHTML
+	var modal = $(ModalWindow.getHTML(answerHTML));
+	$('body').append(modal);
+
+};
+
+function saveFileError(answerHTML) {
+	// create modal window with answerHTML
+	console.log('error')
 };
 
 
@@ -232,3 +249,11 @@ function getNewsLetterHtml() {
 	return html;
 };
 
+
+function copyToClipboard(text) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(text).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
