@@ -304,7 +304,7 @@ $(document).on('click', 'button.copy-url' ,function(e){
 
 	var url;
 	var secondPart = $(this).parent().find('a.copy-url').attr('href');
-	var firsPart = window.location;
+	var firsPart = window.location.href.split('#')[0];
 
 	url = firsPart +  secondPart;
 

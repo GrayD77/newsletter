@@ -27,7 +27,7 @@
 	if (file_exists($file)) {
 
 		echo '
-			<p>Файл '. $action .' и доступен по <a class="copy-url" target="_blank" href="' . $url . '">ссылке:</a></p>
+			<p>Файл '. $action .' и доступен по <a target="_blank" class="copy-url" href="' . $url . '">ссылке:</a></p>
 			<button class="copy-url">Скопировать URL</button>
 		';
 
