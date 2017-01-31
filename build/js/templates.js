@@ -88,9 +88,13 @@ var Templates = {
 					<tr class="h2" style="color: #ef4136; font-size: 32px; margin: 0; padding: 0;">
 						<td style="margin: 0; padding: 0; width: 45px;"></td>
 						<td align="center" style="margin: 0; padding: 0;">
-							<span mc:edit="title">
-								${item.data.title}
-							</span>
+							<a target="_blank" href="
+								${item.data.link}
+							" style="text-decoration: none; color: #ef4136;">
+								<span mc:edit="title" style="color: #ef4136; font-size: 32px;">
+									${item.data.title}
+								</span>
+							</a>
 						</td>
 						<td style="margin: 0; padding: 0; width: 45px;"></td>
 					</tr>
@@ -100,11 +104,17 @@ var Templates = {
 					<tr style="margin: 0; padding: 0;">
 						<td style="margin: 0; padding: 0; width: 45px;"></td>
 						<td style="margin: 0; padding: 0; width: 710px;">
-							<img mc:edit="main-event-img" src="
 
-							${item.data.img}
+							<a target="_blank" href="
+								${item.data.link}
+							" style="text-decoration: none;">
+								<img mc:edit="main-event-img" src="
 
-							" width="710" height="355" alt="VentureDay - 12 April 2017" style="display: block; height: auto; max-width: 710px;">
+								${item.data.img}
+
+								" width="710" height="355" alt="VentureDay - 12 April 2017" style="display: block; height: auto; max-width: 710px;">
+							</a>
+
 						</td>
 						<td style="margin: 0; padding: 0; width: 45px;"></td>
 					</tr>
@@ -154,12 +164,19 @@ var Templates = {
 					</tr>
 					<tr style="margin: 0; padding: 0;">
 						<td align="center" style="margin: 0; padding: 0;">
+
+							<a target="_blank" href="
+								${item.data.link}
+							" style="text-decoration: none; color: #ef4136;">
+
 							<span mc:edit="article-title" class="article-title" style="color: #ef4136; font-size: 30px; line-height: 35px;">
 
 
 								${item.data.title}
 
 							</span>
+
+							</a>
 						</td>
 					</tr>
 					<tr style="height: 30px; margin: 0; padding: 0;">
@@ -171,25 +188,26 @@ var Templates = {
 						<td style="margin: 0; padding: 0; width: 45px;"></td>
 
 						<td style="margin: 0; padding: 0; width: 360px;">
-							<img mc:edit="article-image" src="
+
+							<a target="_blank" href="
+								${item.data.link}
+							" style="text-decoration: none;">
+
+								<img mc:edit="article-image" src="
 
 
-								${item.data.img}
+
+									${item.data.img}
 
 
-							" height="330" width="360" alt="Фриланс без сахара" style="display: block; height: auto; max-width: 360px;">
+								" height="330" width="360" alt="Фриланс без сахара" style="display: block; height: auto; max-width: 360px;">
+							</a>
 						</td>
 						<td style="margin: 0; padding: 0; width: 20px;"></td>
 						<td align="left" valign="top" style="margin: 0; padding: 0;">
 							<span mc:edit="article-dscr" class="article-dscr" style="font-size: 16px; line-height: 24px;">
 
 								${item.data.dscr}
-
-								<a href="
-									${item.data.link}
-								"  style="color: #000; ">
-									(Подробнее)
-								</a>
 
 							</span>
 						</td>
@@ -253,7 +271,7 @@ var Templates = {
 
 						<a target="_blank" href="
 							${item.data.events[i].link}
-						" style="display:block;">
+						" style="display:block; text-decoration:none;">
 
 						<img mc:edit="event-1-image" src="
 
@@ -309,10 +327,6 @@ var Templates = {
 
 
 							${item.data.events[i+1] ? item.data.events[i+1].dscr : ''}
-
-
-
-
 
 
 						</span>

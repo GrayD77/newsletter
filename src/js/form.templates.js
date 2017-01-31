@@ -37,7 +37,7 @@ var FormTemplates = {
 			<form action=""  class="editForm" data-index="${item.index}">
 				<h1>${item.data.sectionTitle}</h1>
 
-								<div class="section-controls">
+				<div class="section-controls">
 					<span class="sectionUp section-sort"></span>
 					<span class="sectionDown section-sort"></span>
 					<span class="sectionRemove">X</span>
@@ -52,6 +52,12 @@ var FormTemplates = {
 					<span>Название события</span>
 					<input type="text" name="title" value="${item.data.title}">
 				</label>
+
+				<label>
+					<span>Ссылка на событие</span>
+					<input type="text" name="link" value="${item.data.link}">
+				</label>
+
 
 				<label>
 					<span>Ссылка на кратинку:</span>

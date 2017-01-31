@@ -22,12 +22,21 @@
 				"type" : "mainEvent",
 				"name" : "Главное событие",
 
+
 				"data" : {
 
 					"sectionTitle" : "comming soon...",
-					"title" : "Главное событие",
-					"img" : "http://lorempixel.com/710/355",
-					"dscr" : "text"
+
+					"events" : [
+
+						{
+							"title" : "Главное событие",
+							"link" : "https://imaguru.by",
+							"img" : "http://placehold.it/710x355",
+							"dscr" : "text"
+						}
+
+					]
 
 				}
 			},
@@ -37,9 +46,9 @@
 				"name" : "Статья",
 
 				"data" : {
-					"img": "http://lorempixel.com/360/330",
+					"img": "http://placehold.it/360x330",
 					"sectionTitle" : "НОВОСТИ IMAGURU",
-					"link" : "http://",
+					"link" : "http://imaguru.by",
 					"title" : "Заголовок статьи",
 					"dscr" : "Текст статьи"
 				}
@@ -55,7 +64,7 @@
 
 						{
 							"img" : "http://placehold.it/256x216",
-							"link" : "http://",
+							"link" : "http://imaguru.by",
 							"date" : "01 ЯНВАРЯ",
 							"dscr" : "Описание"
 						}
@@ -65,7 +74,7 @@
 
 				"template" : {
 					"img" : "http://placehold.it/256x216",
-					"link" : "http://",
+					"link" : "http://imaguru.by",
 					"date" : "01 ЯНВАРЯ",
 					"dscr" : "Описание"
 				}
@@ -105,16 +114,33 @@
 			}
 		},
 
-
 		{
+
 			"type" : "mainEvent",
+			"name" : "Главное событие",
 
 
 			"data" : {
+
 				"sectionTitle" : "comming soon...",
-				"title" : "Venture Day Minsk",
-				"img" : "http://imaguru.co/newsletter/vd.jpg",
-				"dscr" : "Hey, world, meet us again!\r\n<br><br>\r\nVenture Day Minsk is an international startup event organized annually by Belbiz to connect local startup talent to the international venture community.<br>April 12, 2017 is the Date! 3 months left before VD rocket is launched to Startup Space.\r\n<br><br>\r\nDon’t hold back the curiosity – stay updated following us.\r\n<a href=\"https://www.facebook.com/hashtag/VD\" target=\"_blank\" style=\"color: inherit;\">#VD</a>\r\n<a href=\"https://www.facebook.com/hashtag/VentureDay\" target=\"_blank\" style=\"color: inherit;\">#VentureDay</a>"
+
+				"events" : [
+					{
+						"title" : "Venture Day Minsk",
+						"link" : "https://imaguru.by",
+						"img" : "http://imaguru.co/newsletter/vd.jpg",
+						"dscr" : "Hey, world, meet us again!\r\n<br><br>\r\nVenture Day Minsk is an international startup event organized annually by Belbiz to connect local startup talent to the international venture community.<br>April 12, 2017 is the Date! 3 months left before VD rocket is launched to Startup Space.\r\n<br><br>\r\nDon’t hold back the curiosity – stay updated following us.\r\n<a href=\"https://www.facebook.com/hashtag/VD\" target=\"_blank\" style=\"color: inherit;\">#VD</a>\r\n<a href=\"https://www.facebook.com/hashtag/VentureDay\" target=\"_blank\" style=\"color: inherit;\">#VentureDay</a>"
+					},
+
+					{
+						"title" : "Главное событие",
+						"link" : "https://imaguru.by",
+						"img" : "http://placehold.it/710x355",
+						"dscr" : "text"
+					}
+
+				],
+
 			}
 		},
 
@@ -124,7 +150,7 @@
 			"data" : {
 				"img": "http://imaguru.co/newsletter/freelance.jpg",
 				"sectionTitle" : "НОВОСТИ IMAGURU",
-				"link" : "http://",
+				"link" : "https://imaguru.by",
 				"title" : "СПЕЦВЫПУСК ДЛЯ БЕЛАРУСИ:\r\n<br>НЕ БОЙТЕСЬ НАЛОГОВОЙ!\r\n<br>(Как фрилансить на upwork легально?)",
 				"dscr" : "Как легально фрилансить на Upwork гражданам Беларуси? На вопросы отвечает Маргарита Новосельцева, учредитель бухгалтерских компаний “Райкири” и “Делай Свое Дело”. Главный бухгалтер с опытом работы более 10 лет и опытом налогового и бухгалтерского консалтинга более 7 лет в IT-сфере. Автор полезных статей, спикер семинаров и конференций, обучающих курсов на различных площадках для IT-бизнеса. В клиентском портфеле более 100 компаний."
 			}
@@ -136,7 +162,7 @@
 			"data" : {
 				"img": "http://imaguru.co/newsletter/imaguru-plant.jpg",
 				"sectionTitle" : "IMAGURU РЕКОМЕНДУЕТ",
-				"link" : "http://",
+				"link" : "https://imaguru.by",
 				"title" : "Здания бывших заводов — идеальное место для коворкингов, креативных площадок и квест-комнат",
 				"dscr" : "В Минске достаточно объектов, которые якобы никому не нужны: здания бывших заводов, старые административные площадки, подвальные помещения. Мнение минчан по этому вопросу разделилось: одни хотят все это поскорее снести, другие считают, что такие объекты можно переделать и подарить им вторую жизнь. Мы приверженцы второго варианта. Realt.by поездил по городу и обнаружил, что таким объектам найдено множество функциональных применений — самые яркие из них в нашем фоторепортаже."
 			}
@@ -151,21 +177,21 @@
 
 					{
 						"img" : "http://imaguru.co/newsletter/ev1.jpg",
-						"link" : "http://",
+						"link" : "https://imaguru.by",
 						"date" : "16 ЯНВАРЯ",
 						"dscr" : "Клуб тренеров. Эмоциональный интеллект в работе и жизни. "
 					},
 
 					{
 						"img" : "http://imaguru.co/newsletter/ev2.jpg",
-						"link" : "http://",
+						"link" : "https://imaguru.by",
 						"date" : "17 ЯНВАРЯ",
 						"dscr" : "\"English Evening\" (уровень intermediate и выше) - каждый вторник"
 					},
 
 					{
 						"img" : "http://imaguru.co/newsletter/ev3.jpg",
-						"link" : "http://",
+						"link" : "https://imaguru.by",
 						"date" : "18 ЯНВАРЯ",
 						"dscr" : "Мастер класс Алексанра самойлова: Нематериальная мотивация сотрудников"
 					}
@@ -175,7 +201,7 @@
 
 			"template" : {
 				"img" : "http://placehold.it/256x216",
-				"link" : "http://",
+				"link" : "https://imaguru.by",
 				"date" : "01 ЯНВАРЯ",
 				"dscr" : "Описание"
 			}
