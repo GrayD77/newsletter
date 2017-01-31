@@ -1,25 +1,45 @@
 
 var letterContainer = $('#newsletter');
 var formContainer = $('#editContainer');
+var wholeData;
 var enterData;
 var addtData;
 
 var jsonDirectory = "files/";
 
-
+getJSON();
 // get JSON
-$.getJSON("files/default.json", function(data){
-	// create DOM
-	createNewsLetter(data);
-});
+function getJSON(name){
+	name = name || 'default';
+	// $.getJSON("files/"+ name +".json", function(data){
+	// 	// create DOM
+	// 	createNewsLetter(data);
+	// });
+
+	$.ajax({
+		dataType: "json",
+		url: "files/"+ name +".json",
+		success:  function(data){
+		// create DOM
+		window.location.hash = name;
+		createNewsLetter(data);
+		},
+		error: function(){
+			newModal('<p>Файл не найден</p>');
+		}
+	});
+
+}
+
 
 
 function createNewsLetter(data){
 	// parse JSON and create DOM elemmets
 	// according to the types of the type of each element
 	if (data) {
-		addData = data.info;
-		enterData = data.data;
+		wholeData = data;
+		addData = wholeData.info;
+		enterData = wholeData.data;
 	}
 
 	letterContainer.html('');
@@ -236,6 +256,13 @@ $(document).on('click', '.sort', function(e){
 
 });
 
+$('#openNewsLetter').on('submit', function(e){
+	e.preventDefault();
+	var name = $(this).find('input[name="fileName"]').val();
+	if (!name) return;
+	getJSON(name);
+	$(this)[0].reset();
+});
 
 $('#saveHTML').on('submit', function(e){
 	e.preventDefault();
@@ -256,6 +283,13 @@ $('#saveHTML').on('submit', function(e){
 	);
 
 
+	$.ajax(
+		{
+			type: "POST",
+			url: "php/save-json.php",
+			data : {myJson : JSON.stringify(wholeData), fileName: htmlFile.name}
+		}
+	);
 });
 
 
@@ -281,6 +315,13 @@ $(document).on('click', '.copy-url' ,function(e){
 function saveFileSuccess(answerHTML) {
 	// create modal window with answerHTML
 	var modal = $(ModalWindow.getHTML(answerHTML));
+	$('body').append(modal);
+
+};
+
+function newModal(html) {
+	// create modal window with answerHTML
+	var modal = $(ModalWindow.getHTML(html));
 	$('body').append(modal);
 
 };

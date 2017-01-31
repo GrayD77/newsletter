@@ -10,14 +10,21 @@
 <body>
 
 	<!--  Let's -->
-	<form action="" class="saveNewsLetter" id="saveHTML">
-		<label class="overwrite">
-			<span>Существующие файлы будут перезаписаны!</span>
-			<input type="checkbox" name="overwrite" style="display: none;">
-		</label>
-		<input class="file-name" name="fileName" type="text" placeholder="Имя рассылки( a-Z 0-9 - )" pattern="^[a-z0-9-]+$">
-		<button>Сохранить письмо как web-страницу</button>
-	</form>
+	<header>
+		<form action="" class="openNewsLetter" id="openNewsLetter">
+			<input class="file-name" name="fileName" type="text" placeholder="Имя рассылки( a-Z 0-9 - )" pattern="^[a-z0-9-]+$">
+			<button>Открыть</button>
+		</form>
+
+		<form action="" class="saveNewsLetter" id="saveHTML">
+			<label class="overwrite">
+				<span>Существующие файлы будут перезаписаны!</span>
+				<input type="checkbox" name="overwrite" style="display: none;">
+			</label>
+			<input class="file-name" name="fileName" type="text" placeholder="Имя рассылки( a-Z 0-9 - )" pattern="^[a-z0-9-]+$">
+			<button>Сохранить письмо как web-страницу</button>
+		</form>
+	</header>
 
 	<main>
 
