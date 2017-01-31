@@ -40,7 +40,7 @@ main {
 .controls form {
 
 	border-top: 2px solid #aaa;
-	padding: 20px;
+	padding:  0 20px 20px;
 
 	h1 {
 		font-weight: 600;
@@ -48,7 +48,7 @@ main {
 		text-align: center;
 		margin: 0 -20px 20px;
 		font-size: 1.2em;
-		line-height: 3;
+		line-height: 3.5;
 	}
 
 	h2 {
@@ -104,6 +104,10 @@ main {
 	left: 0;
 	width: 100%;
 	overflow: hidden;
+
+	.editForm {
+		position: relative;
+	}
 }
 
 .saveNewsLetter {
@@ -255,5 +259,61 @@ main {
 			top: 5px;
 			z-index: 99;
 		}
+	}
+}
+
+.section-controls {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+
+	.sectionRemove {
+		background-color: #fff;
+		border-radius: 50%;
+		width: 15px;
+		height: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 10px;
+		cursor: pointer;
+	}
+
+	.section-sort {
+		display: block;
+		background-color: transparent;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		cursor: pointer;
+		margin-right: 5px;
+	}
+
+	.section-sort.sectionUp {
+			border-bottom: 10px solid #aaa;
+			&:hover {
+				border-bottom-color: #000;
+			}
+	}
+	.section-sort.sectionDown {
+			border-top: 10px solid #aaa;
+			&:hover {
+				border-top-color: #000;
+			}
+	}
+}
+
+.editForm:first-of-type {
+	.section-sort.sectionUp {
+		visibility: hidden;
+	}
+}
+
+.editForm:last-of-type {
+	.section-sort.sectionDown {
+		visibility: hidden;
 	}
 }

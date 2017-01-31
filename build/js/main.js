@@ -2,7 +2,8 @@
 var letterContainer = $('#newsletter');
 var formContainer = $('#editContainer');
 var enterData;
-var currentData;
+var addtData;
+
 var jsonDirectory = "files/";
 
 
@@ -14,19 +15,24 @@ $.getJSON("files/default.json", function(data){
 
 
 function createNewsLetter(data){
-
 	// parse JSON and create DOM elemmets
 	// according to the types of the type of each element
-	enterData = data;
+	if (data) {
+		addData = data.info;
+		enterData = data.data;
+	}
 
-	var length = data.length;
+	letterContainer.html('');
+	formContainer.html('')
+
+	var length = enterData.length;
 	var letterDomElement = $('<center style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; margin: 0; padding: 0;">');
 	var formDomElement = $('<div class="form-container">');
 
 
-	for (var i = 0, length = data.length; i < length; i++) {
+	for (var i = 0, length = enterData.length; i < length; i++) {
 
-		var that = data[i];
+		var that = enterData[i];
 		that.index = i;
 
 		var newSection = $(Templates.create(that.type, that));
@@ -36,6 +42,10 @@ function createNewsLetter(data){
 		formDomElement.append(newForm);
 
 	}
+
+	// newSection form
+	var newSectionForm = $(FormTemplates.create('addSection', addData))
+	formDomElement.append(newSectionForm);
 
 	letterContainer.append(letterDomElement);
 	formContainer.append(formDomElement);
@@ -47,7 +57,67 @@ $(document).on('submit', '.editForm', function(e){
 	e.preventDefault();
 });
 
+$(document).on('submit', '.addSection', function(e){
+	e.preventDefault();
 
+	var sectionTitle = $(this).find('[name="sectionTitle"]').val();
+	console.log(`sectionTitle: ${sectionTitle}`);
+	var typeIndex = $(this).find('[name="sectionType"]').val()
+	var dataElement = {};
+
+	var template = addData.sectionTemplates[typeIndex];
+
+	for (var key in template) {
+		dataElement[key] = template[key];
+	}
+
+	dataElement.data.sectionTitle = sectionTitle;
+
+	enterData.push(dataElement);
+
+	createNewsLetter();
+
+});
+
+$(document).on('click', '.sectionUp, .sectionDown', function(e){
+
+	e.preventDefault();
+
+
+	var delta = $(this).hasClass('sectionUp')   ? -1 :
+				$(this).hasClass('sectionDown') ?  1 : null;
+
+	if (!delta) return;
+
+	var form = $(this).closest('.editForm')
+	var fromIndex = form.data('index');
+	var toIndex = fromIndex + delta;
+
+	if (toIndex < 0 || toIndex >= enterData.length) return;
+
+	var temp = enterData[fromIndex];
+
+	enterData[fromIndex] = enterData[toIndex];
+	enterData[toIndex] = temp;
+
+
+	createNewsLetter();
+
+});
+
+$(document).on('click', '.sectionRemove', function(e){
+
+	e.preventDefault();
+
+	var form = $(this).closest('.editForm')
+	var index = form.data('index');
+
+	enterData.splice(index, 1);
+
+
+	createNewsLetter();
+
+});
 // forms:
 
 $(document).on('keyup change', '.editForm', function(e){
@@ -114,7 +184,6 @@ $(document).on('click', '#addEvent, #addFoto' ,function(e){
 	$('.section-wrapper').eq(index).html(newHTML);
 	var newForm = $(FormTemplates.create(item.type, item)).html();
 	$('.editForm').eq(index).html(newForm);
-
 
 });
 

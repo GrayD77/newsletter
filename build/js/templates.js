@@ -185,6 +185,11 @@ var Templates = {
 
 								${item.data.dscr}
 
+								<a href="
+									${item.data.link}
+								"  style="color: #000; ">
+									(Подробнее)
+								</a>
 
 							</span>
 						</td>
@@ -264,10 +269,15 @@ var Templates = {
 						<span style="display: block; height: 6px;"></span>
 						<span mc:edit="event-1-dscr" class="event-dscr">
 
-
 							${item.data.events[i].dscr}
+							<a target="_blank" href="
 
+								${item.data.events[i].link}
 
+							" 
+							style="color: #000; font-size: 13px;">
+								(читать)
+							</a>
 						</span>
 					</td>
 					<td style="margin: 0; padding: 0; width: 42px;"></td>
@@ -294,6 +304,13 @@ var Templates = {
 							${item.data.events[i+1] ? item.data.events[i+1].dscr : ''}
 
 
+							<a target="_blank" href="
+
+								${item.data.events[i+1] ? item.data.events[i+1].link : ''}
+
+							" style="color: #000; font-size: 13px;">
+								${item.data.events[i+1] ? '(читать)' : ''}
+							</a>
 						</span>
 					</td>
 					<td style="margin: 0; padding: 0; width: 123px;"></td>

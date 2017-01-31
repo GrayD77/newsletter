@@ -7,10 +7,19 @@ var FormTemplates = {
 
 			<form action=""  class="editForm" data-index="${item.index}">
 
+				<div class="section-controls">
+					<span class="sectionUp section-sort"></span>
+					<span class="sectionDown section-sort"></span>
+					<span class="sectionRemove">X</span>
+				</div>
+
+				<h1>${item.data.sectionTitle}</h1>
+
 				<label>
 					<span>Дата (например: 16-25 января)</span>
 					<input type="text" name="date" value="${item.data.date}">
 				</label>
+
 				<label>
 					<span>ссылка на кратинку:</span>
 					<input type="text" name="img" value="${item.data.img}">
@@ -27,6 +36,13 @@ var FormTemplates = {
 		var html = `
 			<form action=""  class="editForm" data-index="${item.index}">
 				<h1>${item.data.sectionTitle}</h1>
+
+								<div class="section-controls">
+					<span class="sectionUp section-sort"></span>
+					<span class="sectionDown section-sort"></span>
+					<span class="sectionRemove">X</span>
+				</div>
+
 				<label>
 					<span>Заголовок раздела</span>
 					<input type="text" name="sectionTitle" value="${item.data.sectionTitle}">
@@ -57,6 +73,13 @@ var FormTemplates = {
 		var html = `
 			<form action=""  class="editForm" data-index="${item.index}">
 				<h1>${item.data.sectionTitle}</h1>
+
+								<div class="section-controls">
+					<span class="sectionUp section-sort"></span>
+					<span class="sectionDown section-sort"></span>
+					<span class="sectionRemove">X</span>
+				</div>
+
 				<label>
 					<span>Заголовок раздела</span>
 					<input type="text" name="sectionTitle" value="${item.data.sectionTitle}">
@@ -77,7 +100,10 @@ var FormTemplates = {
 					<textarea name="dscr" value="">${item.data.dscr}
 					</textarea>
 				</label>
-
+				<label>
+					<span>Ссылка на новость</span>
+					<input type="text" name="link" value="${item.data.link}">
+				</label>
 			</form>
 			`;
 		return html;
@@ -92,6 +118,13 @@ var FormTemplates = {
 		htmlHeader = `
 		<form class="editForm events" data-index="${item.index}" data-name="events">
 		<h1>${item.data.sectionTitle}</h1>
+
+				<div class="section-controls">
+					<span class="sectionUp section-sort"></span>
+					<span class="sectionDown section-sort"></span>
+					<span class="sectionRemove">X</span>
+				</div>
+
 		<label>
 			<span>Заголовок раздела</span>
 			<input type="text" name="sectionTitle" value="${item.data.sectionTitle}">
@@ -131,6 +164,10 @@ var FormTemplates = {
 						<span>Название</span>
 						<textarea class="event" name="dscr">${item.data.events[i].dscr}</textarea>
 					</label>
+					<label>
+						<span>Ссылка на новость</span>
+						<input type="text" name="link" value="${item.data.events[i].link}">
+					</label>
 				</div>
 
 			`;
@@ -150,6 +187,13 @@ var FormTemplates = {
 		htmlHeader = `
 		<form class="editForm fotos" data-index="${item.index}" data-name="fotos">
 		<h1>${item.data.sectionTitle}</h1>
+
+		<div class="section-controls">
+			<span class="sectionUp section-sort"></span>
+			<span class="sectionDown section-sort"></span>
+			<span class="sectionRemove">X</span>
+		</div>
+
 		<label>
 			<span>Заголовок раздела</span>
 			<input type="text" name="sectionTitle" value="${item.data.sectionTitle}">
@@ -189,6 +233,13 @@ var FormTemplates = {
 
 			<form action=""  class="editForm" data-index="${item.index}">
 				<h3>${item.data.sectionTitle}</h3>
+
+								<div class="section-controls">
+					<span class="sectionUp section-sort"></span>
+					<span class="sectionDown section-sort"></span>
+					<span class="sectionRemove">X</span>
+				</div>
+
 				<label>
 					<span>Заголовок раздела</span>
 					<input type="text" name="sectionTitle" value="${item.data.sectionTitle}">
@@ -196,6 +247,42 @@ var FormTemplates = {
 			</form>
 
 		`;
+
+		return html;
+	},
+
+	addSection: function(item) {
+		// item -> addData (data.info)
+
+		var html = `
+			<hr>
+			<form action="" class="addSection">
+				<h1>СОЗДАТЬ РАЗДЕЛ:</h1>
+				<label>
+					<span>Заголовок раздела:</span>
+					<input type="text" name="sectionTitle">
+				</label>
+				<label>
+					<span>Тип раздела</span>
+					<select name="sectionType">
+
+		`;
+
+
+		for (var i = 0, length = item.sectionTemplates.length; i < length; i++) {
+
+			html += `<option value="${i}">${item.sectionTemplates[i].name}</option>`;
+
+		}
+
+
+		html += `
+					</select>
+				</label>
+				<button class="createSection">Создать</button>
+			</form>
+		`;
+
 
 		return html;
 	},
