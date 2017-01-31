@@ -299,11 +299,11 @@ $(document).on('click', '.close-modal' ,function(e){
 
 });
 
-$(document).on('click', '.copy-url' ,function(e){
+$(document).on('click', 'button.copy-url' ,function(e){
 	e.preventDefault();
 
 	var url;
-	var secondPart = $(this).parent().find('.copy-url').attr('href');
+	var secondPart = $(this).parent().find('a.copy-url').attr('href');
 	var firsPart = window.location;
 
 	url = firsPart +  secondPart;
