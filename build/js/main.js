@@ -274,6 +274,7 @@ $('#saveHTML').on('submit', function(e){
 	htmlFile.html = getNewsLetterHtml();
 	htmlFile.name = $(this).find('input[name="fileName"]').val();
 	htmlFile.overwrite = $(this).find('input[name="overwrite"]').is(':checked');
+	console.log(htmlFile,JSON.stringify(wholeData) )
 
 	$.ajax(
 		{
@@ -293,6 +294,7 @@ $('#saveHTML').on('submit', function(e){
 			data : {myJson : JSON.stringify(wholeData), fileName: htmlFile.name}
 		}
 	);
+
 });
 
 

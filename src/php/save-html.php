@@ -1,4 +1,10 @@
 <?php
+	if (!isset($_POST['name']) && !isset($_POST['html'])) {
+		echo '
+			<p>Файл не создан. Произошла ошибка.</p>
+		';
+		return;
+	}
 
 	$file = '../saved/'.$_POST['name'].'.html';
 
