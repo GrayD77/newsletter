@@ -96,7 +96,7 @@ var Templates = {
 								${item.data.events[i].link}
 
 							" style="text-decoration: none; color: #ef4136;">
-								<span mc:edit="title" style="color: #ef4136; font-size: 32px;">
+								<span mc:edit="title-${i}" style="color: #ef4136; font-size: 32px;">
 
 									${item.data.events[i].title}
 
@@ -115,7 +115,7 @@ var Templates = {
 							<a target="_blank" href="
 								${item.data.events[i].link}
 							" style="text-decoration: none;">
-								<img mc:edit="main-event-img" src="
+								<img mc:edit="main-event-img-${i}" src="
 
 								${item.data.events[i].img}
 
@@ -131,7 +131,7 @@ var Templates = {
 					<tr style="margin: 0; padding: 0;">
 						<td style="margin: 0; padding: 0; width: 45px;"></td>
 						<td style="margin: 0; padding: 0;">
-							<span mc:edit="main-event-descr" style="font-size: 16px; line-height: 19px;">
+							<span mc:edit="main-event-descr-${i}" style="font-size: 16px; line-height: 19px;">
 
 							${item.data.events[i].dscr}
 
@@ -157,7 +157,7 @@ var Templates = {
 				<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
 					<tr style="margin: 0; padding: 0;">
 						<td align="center" style="font-size: 19px; height: 60px; margin: 0; padding: 0;">
-							<span mc:edit="section-title-3">
+							<span mc:edit="section-title-${item.index}">
 
 
 								${item.data.sectionTitle}
@@ -178,7 +178,7 @@ var Templates = {
 								${item.data.link}
 							" style="text-decoration: none; color: #ef4136;">
 
-							<span mc:edit="article-title" class="article-title" style="color: #ef4136; font-size: 30px; line-height: 35px;">
+							<span mc:edit="article-title-${item.index}" class="article-title" style="color: #ef4136; font-size: 30px; line-height: 35px;">
 
 
 								${item.data.title}
@@ -202,7 +202,7 @@ var Templates = {
 								${item.data.link}
 							" style="text-decoration: none;">
 
-								<img mc:edit="article-image" src="
+								<img mc:edit="article-image-${item.index}" src="
 
 									${item.data.img}
 
@@ -212,7 +212,7 @@ var Templates = {
 						</td>
 						<td style="margin: 0; padding: 0; width: 20px;"></td>
 						<td align="left" valign="top" style="margin: 0; padding: 0;">
-							<span mc:edit="article-dscr" class="article-dscr" style="font-size: 16px; line-height: 24px;">
+							<span mc:edit="article-dscr-${item.index}" class="article-dscr" style="font-size: 16px; line-height: 24px;">
 
 								${item.data.dscr}
 
@@ -245,7 +245,7 @@ var Templates = {
 				<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
 					<tr style="margin: 0; padding: 0;">
 						<td align="center" style="font-size: 19px; height: 60px; margin: 0; padding: 0;">
-							<span mc:edit="section-title-2">
+							<span mc:edit="section-title-${item.index}">
 
 								${item.data.sectionTitle}
 
@@ -280,7 +280,7 @@ var Templates = {
 							${item.data.events[i].link}
 						" style="display:block; text-decoration:none;">
 
-						<img mc:edit="event-1-image" src="
+						<img mc:edit="event-image-${i}" src="
 
 
 							${item.data.events[i].img}
@@ -290,7 +290,7 @@ var Templates = {
 							</a>
 
 						<span style="display: block; height: 12px;"></span>
-						<span mc:edit="event-1-date" class="event-date" style="color: #ef4136; font-size: 19px;">
+						<span mc:edit="event-date-${i}" class="event-date" style="color: #ef4136; font-size: 19px;">
 
 
 							${item.data.events[i].date}
@@ -298,7 +298,7 @@ var Templates = {
 
 						</span>
 						<span style="display: block; height: 6px;"></span>
-						<span mc:edit="event-1-dscr" class="event-dscr">
+						<span mc:edit="event-dscr-${i}" class="event-dscr">
 
 							${item.data.events[i].dscr}
 
@@ -322,7 +322,7 @@ var Templates = {
 						</a>
 
 						<span style="display: block; height: 12px;"></span>
-						<span mc:edit="event-2-date" class="event-date" style="color: #ef4136; font-size: 19px;">
+						<span mc:edit="event-date-${i+1}" class="event-date" style="color: #ef4136; font-size: 19px;">
 
 
 							${item.data.events[i+1] ? item.data.events[i+1].date : ''}
@@ -330,7 +330,7 @@ var Templates = {
 
 						</span>
 						<span style="display: block; height: 6px;"></span>
-						<span mc:edit="event-2-dscr" class="event-dscr">
+						<span mc:edit="event-dscr-${i+1}" class="event-dscr">
 
 
 							${item.data.events[i+1] ? item.data.events[i+1].dscr : ''}
@@ -362,7 +362,7 @@ var Templates = {
 				<table width="800" border="0" cellpadding="0" cellspacing="0" class="devider" bgcolor="#f1f2f2" style="background-color: #f1f2f2; height: 60px; margin: 0; padding: 0;">
 					<tr style="margin: 0; padding: 0;">
 						<td align="center" style="font-size: 19px; height: 60px; margin: 0; padding: 0;">
-							<span mc:edit="section-title-5">
+							<span mc:edit="section-title-${item.index}">
 
 								${item.data.sectionTitle}
 
@@ -391,7 +391,7 @@ var Templates = {
 					<td style="margin: 0; padding: 0; width: 45px;"></td>
 					<td style="margin: 0; padding: 0;">
 
-						<img mc:edit="social-photo-1" src="
+						<img mc:edit="social-photo-${i}" src="
 
 							${item.data.fotos[i].img}
 
@@ -401,7 +401,7 @@ var Templates = {
 					<td style="margin: 0; padding: 0;">
 
 
-						${item.data.fotos[i+1] ? '<img mc:edit="social-photo-2" src="' : ''}
+						${item.data.fotos[i+1] ? '<img mc:edit="social-photo-${i}" src="' : ''}
 						${item.data.fotos[i+1] ? item.data.fotos[i + 1].img : ''}
 						${item.data.fotos[i+1] ? '" width="220" height="190" alt="Фото" style="display: block; height: auto; max-width: 220px;">' : ''}
 
@@ -410,7 +410,7 @@ var Templates = {
 					<td style="margin: 0; padding: 0;">
 
 
-						${item.data.fotos[i+2] ? '<img mc:edit="social-photo-3" src="' : ''}
+						${item.data.fotos[i+2] ? '<img mc:edit="social-photo-${i}" src="' : ''}
 
 						${item.data.fotos[i+2] ? item.data.fotos[i+2].img : ''}
 

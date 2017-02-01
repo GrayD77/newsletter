@@ -251,7 +251,7 @@
 			"type" : "footer",
 			"data" : {
 				"sectionTitle" : "FOLLOW US",
-				"footerHTMLContent" : "Copyright © 2017 IMAGURU: Бизнес-Клуб/Startup Hub, All rights reserved.\r\n<br>\r\nYou are reciving this email\r\n<br>\r\n<br><br>\r\nOur mailing address is:\r\n<br>IMAGURU: Бизнес-клуб/Startup Hub\r\n<br>ул. Фабрициуса\r\n<br>Минск 220007\r\n<br>Belarus\r\n<br>\r\n<br><br>\r\nAdd us to your address book\r\n<br>\r\n<br><br>\r\nWant to change how you receive these emails?\r\n<br>\r\nYou can update your preferences or <a href=\"*|UNSUB|*\">unsubscribe</a> from this list\r\n<br>\r\n"
+				"footerHTMLContent" : "Copyright © 2017 IMAGURU: Бизнес-Клуб/Startup Hub, All rights reserved.\r\n<br>\r\nYou are reciving this email\r\n<br>\r\n<br><br>\r\nOur mailing address is:\r\n<br>IMAGURU: Бизнес-клуб/Startup Hub\r\n<br>ул. Фабрициуса\r\n<br>Минск 220007\r\n<br>Belarus\r\n<br>\r\n<br><br>\r\nAdd us to your address book\r\n<br>\r\n<br><br>\r\nWant to change how you receive these emails?\r\n<br>\r\nYou can update your preferences or <a style=\"color:inherit;\" href=\"*|UNSUB|*\">unsubscribe</a> from this list\r\n<br>\r\n"
 			}
 		}
 	]
